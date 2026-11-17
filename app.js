@@ -154,3 +154,38 @@ document.getElementById("out").textContent =
 
   "관객 1위: " + audienceMovie.title +
   " (누적 " + formatNumber(audienceMovie.audience) + "명)";
+
+ // ===== Part C =====
+
+// getList : TMDB 응답 객체 => 영화 배열
+function getList(data) {
+  return data.results;
+}
+
+// C1: TMDB 응답 정보
+console.log(
+  "C1 페이지 " + TMDB.page +
+  ", 전체 페이지 " + TMDB.total_pages +
+  ", 전체 영화 " + TMDB.total_results +
+  ", 이번 응답 " + getList(TMDB).length + "편"
+);
+
+// C2: 현재 상영작 평균 평점
+console.log(
+  "C2 상영작 평균 평점:",
+  averageBy(getList(TMDB), "vote_average").toFixed(1)
+);
+
+// C3: 평점 상위 5편 표
+console.log("C3 평점 상위 5편");
+
+console.table(
+  sortBy(getList(TMDB), "vote_average", true).slice(0, 5),
+  ["title", "release_date", "vote_average"]
+);
+
+// C4: 제목 검색 결과
+console.log(
+  "C4 검색 결과:",
+  search(getList(TMDB), "하트").length + "편"
+);
