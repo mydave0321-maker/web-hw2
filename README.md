@@ -16,16 +16,20 @@
 
 ## 자가 테스트 표
 
+
+## 자가 테스트 표
+
 | 번호 | 호출 | 기대 결과 | 실제 결과 |
 |---|---|---|---|
-| 1 | formatNumber("1234567") | 1,234,567 | 확인 필요 |
-| 2 | average(movies).toFixed(1) | 7.6 | 확인 필요 |
-| 3 | best(movies).title | 세븐 | 확인 필요 |
-| 4 | sortBy(movies, "rating", true)[0].title | 세븐 | 확인 필요 |
-| 5 | filterByRating(movies, 8).length | 3 | 확인 필요 |
-| 6 | search(movies, " 인터 ").length | 0 | 확인 필요 |
-| 7 | yearsSince("2014-11-06") | 12 | 확인 필요 |
-| 8 | movies[0].title | 히트 | 확인 필요 |
+| 1 | formatNumber("1234567") | 1,234,567 | 1,234,567 |
+| 2 | average(movies).toFixed(1) | 7.6 | 7.6 |
+| 3 | best(movies).title | 세븐 | 세븐 |
+| 4 | sortBy(movies, "rating", true)[0].title | 세븐 | 세븐 |
+| 5 | filterByRating(movies, 8).length | 3 | 3 |
+| 6 | search(movies, " 인터 ").length | 0 | 0 |
+| 7 | yearsSince("2014-11-06") | 12 | 12 |
+| 8 | movies[0].title | 히트 | 히트 |
+
 
 ## 어려웠던 점 3가지와 해결
 
