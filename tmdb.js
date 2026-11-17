@@ -2,8 +2,6 @@
 
 const TMDB = {
   "dates": {
-    {
-  "dates": {
     "maximum": "2026-11-18",
     "minimum": "2026-10-07"
   },
@@ -352,8 +350,4 @@ const TMDB = {
   ],
   "total_pages": 6,
   "total_results": 109
-}
-  },
-  "page": 1,
-  "results": []
 };
